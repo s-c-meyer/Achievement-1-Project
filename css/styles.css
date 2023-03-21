@@ -1,0 +1,276 @@
+/*
+Colors used
+
+Text Color (Dark Gray): #2b2b2b
+Primary Color (LightBlue): #99fffd
+Seconday Color (Light Seafoam Green): #99ffc0
+*/
+
+:root {
+    --background-color: #dfcfbe;
+    --primary-color: #191970;
+    --sec-color: #147ebb;
+    --reg-wt: 400;
+    --bold-wt: 700;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Cambay', sans-serif;
+    font-weight: var(--reg-wt);
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+h1 {
+    color: #191970;
+    font-size: 40px;
+    line-height: 1.5;
+}
+
+/*
+a {
+    color: midnightblue;
+}
+
+a:visited {
+    color: cornflowerblue;
+}
+*/
+
+a:hover, a:focus { /*this applies to links that the mouse is hovering over, makes it so that the underline is removed when hovering over it */
+    text-decoration: none;
+}
+
+a:active {
+    color: red;
+}
+
+button, .button {
+    border: none;
+    font-family: inherit; /*inherit causes the button to use the font family from the body*/
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    padding: 10px; /*this adds spacing to the button and will be explained further later */
+    border-radius: 3px;
+    border-bottom: 2px solid rgba(0,0,0,0.3); /*this gives the button a bottom border of 2px width*/
+    transition: 0.2s opacity;
+}
+
+.button:hover, .button:focus, button:hover , button:focus {
+    cursor:pointer; /*this turns the cursor into a pointer when hovering over the button*/
+    opacity:0.8;
+}
+
+/*since there is already a rule set above for button:hover, it is not necessary to do that again, it will inherit it automatically*/
+.button_secondary {
+    background-color: #e0b354;
+    color: #2b2b2b;
+}
+
+.profile__portrait {
+    float: left;
+    width: 250px;
+    margin-right: 40px;
+    border-radius: 50%; /*this gives the portrait a rounded look*/
+    
+}
+
+
+/*the page header, ph__item, and ph__i:last:child below all use a flexbox to properly align the heading of the website*/
+.page-header {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    border-bottom-style:groove;
+    border-bottom-width: 2px;
+    border-bottom-color: var(--primary-color);
+}
+
+.page-header__item {
+    flex: 0 1 200px;
+}
+
+.page-header__item:last-child {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.navigation-list {
+    list-style-type: none;
+}
+
+ 
+.navigation-list li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.page-footer {
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.profile {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/*I set up this separate class to align with the pictures in Exercise 1.7 of all the text aligned in the center of the page*/
+.profile--centered {
+    max-width: 700px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.grid__item { /*used for grid fallback on older browsers*/
+    display: inline-block;
+    width: 33%;
+}
+
+
+/*styling added to nav from codepen provided in Exercise 1.7*/
+nav.container
+{
+    font-family: inherit;
+    margin: 0 auto;
+	padding: 10px 10px;
+	text-align: center;
+}
+
+nav.container a
+{
+    color: var(--primary-color);
+    text-decoration: none;
+    font: 20px Cambay;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+nav.topBottomBordersIn a:before, nav.topBottomBordersIn a:after
+{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: var(--primary-color);
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+nav.topBottomBordersIn a:before
+{
+    top: 0px;
+    transform: translateY(-10px);
+}
+
+nav.topBottomBordersIn a:after
+{
+    bottom: 0px;
+    transform: translateY(10px);
+}
+
+nav.topBottomBordersIn a:hover:before, nav.topBottomBordersIn a:hover:after
+{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+/* The active nav-list item will be bold, to show that is the page that you are on*/
+a.navigation-list__item.navigation-list__item--active {
+    font-weight: var(--bold-wt);
+}
+
+
+@keyframes plane-fly {
+    from {
+        transform: translate(50px, 80px);
+    }
+    to {
+        transform: translate(350px, 80px);
+    }
+}
+
+.plane {
+    animation: 60s plane-fly infinite linear;
+}
+
+@keyframes arch-detail-shimmer {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opactity: 100%;
+    }
+}
+
+.arch_detail {
+    animation: 10s arch-detail-shimmer infinite alternate linear;
+}
+
+@supports (display: grid) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .grid__item {
+        background-color: lightgray;
+        width: auto;
+        min-height: auto;
+        margin: 0;
+        padding: 5px;
+        border-style: solid;
+        border-width: 2px;
+        border-color: var(--sec-color);
+    }
+
+    .grid__item:last-child {
+        grid-column:3/3;
+        grid-row: 1/3;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media all and (max-width: 750px) {
+    .grid {
+        grid-gap: 10px;
+    }
+    .grid__item:last-child {
+        grid-column: auto / auto;
+        grid-row: auto / auto;
+
+    }
+    h1 {
+        font-size: 22px;
+    }
+}
+
+
