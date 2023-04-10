@@ -32,10 +32,11 @@ h1 {
     line-height: 1.5;
 }
 
-#logo {
-    width:40px;
-    height:40px;
+.logo {
+    width: 40px;
+    height: 40px;
 }
+
 
 a:hover, a:focus { /*this applies to links that the mouse is hovering over, makes it so that the underline is removed when hovering over it */
     text-decoration: none;
