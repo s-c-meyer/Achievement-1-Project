@@ -11,7 +11,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
         <link href="https://fonts.googleapis.com/css2?family=Cambay:wght@400;700&display=swap" rel="stylesheet"> 
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.production.css">
     </head>
     
     <body>
@@ -36,45 +36,14 @@
             </nav>
         </header>
 
+
+
+        
         <div class="profile--centered"> <!--a little blurb about me-->
             <h1>About</h1>
-            <p>Hello, my name is Samuel Meyer and I am an aspiring Web Developer.</p>
-            <p>In my freetime I like to sit down and enjoy some video games, go to the gym, or spend time outside enjoying a nice hike.</p>
-        </div>
-
-        <table class="profile--centered"> <!--a table listing out my experience with various applications, setting up using thead, tbody to make it more semantically accurate-->
-            <thead>
-                <tr>
-                    <th>Skills</th>
-                    <th>Years of Experience</th>
-                    <th>Level of Expertise</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>HTML</td>
-                    <td>Less than 1</td>
-                    <td>Beginner</td>
-                </tr>
-                <tr>
-                    <td>AutoDesk Inventor</td>
-                    <td>3</td>
-                    <td>Intermediate</td>
-                </tr>
-                <tr>
-                    <td>Microsoft Office Suite</td>
-                    <td>5</td>
-                    <td>Advanced</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div class="profile--centered">
-            <a href="https://www.linkedin.com/in/samuel-christopher-meyer/" class="button"  target="_blank">Take a look at my LinkedIn!</a>
-        </div>
-        
-        <!--svg of St Louis, MO-->
-        <div class="profile--centered">
+            
+            <!--svg of St Louis, MO-->
+            <div class="about-img">
             <?xml version="1.0" encoding="UTF-8" standalone="no"?>
             <svg  
                 id="Layer_1"
@@ -1480,8 +1449,53 @@
                         rdf:resource="http://creativecommons.org/ns#Distribution" /><cc:permits
                             rdf:resource="http://creativecommons.org/ns#DerivativeWorks" /></cc:License></rdf:RDF></metadata>
             </svg>
+            </div>
+
+            <p>Hello, my name is Samuel Meyer and I am an aspiring Web Developer.</p>
+            <p>In my freetime I like to sit down and enjoy some video games, go to the gym, or spend time outside enjoying a nice hike.</p>
         </div>
 
+        <table class="about__table"> <!--a table listing out my experience with various applications, setting up using thead, tbody to make it more semantically accurate-->
+            <thead>
+                <tr>
+                    <th>Skills</th>
+                    <th>Years of Experience</th>
+                    <th>Level of Expertise</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>HTML</td>
+                    <td>Less than 1</td>
+                    <td>Beginner</td>
+                </tr>
+                <tr>
+                    <td>AutoDesk Inventor</td>
+                    <td>3</td>
+                    <td>Intermediate</td>
+                </tr>
+                <tr>
+                    <td>Microsoft Office Suite</td>
+                    <td>5</td>
+                    <td>Advanced</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="profile--centered">
+            <a href="https://www.linkedin.com/in/samuel-christopher-meyer/" class="button"  target="_blank">Take a look at my LinkedIn!</a>
+        </div>
+
+        <footer class="page-footer"> <!--links at the bottom of the page for different social medias-->
+            <p>Find me on</p>
+            <div class="social-media">
+                <a class="social-media--icon" href="https://github.com/s-c-meyer?tab=projects" target="_blank"><img id="logo" src="img/github_icon.svg" alt="Github icon"></a>
+                <a class="social-media--icon" href="https://www.facebook.com/sam.c.meyer/" target="_blank"><img id="logo" src="img/fb_icon.svg" alt="Facebook icon"></a>
+                <a class="social-media--icon" href="https://www.linkedin.com/in/samuel-christopher-meyer/" target="_blank"><img id="logo" src="img/linkedin_icon.svg" alt="LinkedIn icon"></a>
+            </div>
+        </footer>
+        
+       
 
         <script src="js/tota11y.min.js"></script>
     </body>

@@ -11,7 +11,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
         <link href="https://fonts.googleapis.com/css2?family=Cambay:wght@400;700&display=swap" rel="stylesheet"> 
-        <link rel="stylesheet" type="text/css" href="css/styles.css"> 
+        <link rel="stylesheet" type="text/css" href="css/styles.production.css"> 
     </head>
     
     <body>
@@ -36,35 +36,58 @@
             </nav>
         </header>
 
-        <div class="profile"> <!--a contact me button that links to my email-->
+        <div class="profile--centered"> <!--a contact me button that links to my email-->
             <h1>Contact</h1>
-            <a href="mailto:meyer.samuelc@gmail.com">Contact Me</a><br>
+        </div>    
+            <!-- commented out button from exercise
+            <a href="mailto:meyer.samuelc@gmail.com" class="button">Contact Me</a><br>
             <br>
-
-            <div> <!--my address along with contact info (email/phone)-->
+            -->
+        <div class="contact-profile">  
+            
+            <div class="profile__content"> <!--my address along with contact info (email/phone)-->
+                <h2>I look forward to hearing from you, reach out to me with anything! </h2><br><br>
                 Samuel Meyer<br>
                 2350 S Edgewood St.<br>
                 Seaside, OR 97138<br>
                 <br>
-                Tel: <a href="tel:3145202768">(314) 520-2768</a><br>
-                Email: <a href="mailto:meyer.samuelc@gmail.com">meyer.samuelc@gmail.com</a><br>
+                <span>Tel: <a href="tel:3145202768">(314) 520-2768</a></span><br>
+                <span>Email: <a href="mailto:meyer.samuelc@gmail.com">meyer.samuelc@gmail.com</a></span><br>
             </div>
+
+            <div class="profile__content"> <!--this creates a form for contacting me where you can input your email and phone number to be reached out, along with verification for email addresses and phone numbers-->
+                <form action="" method="post" id="contact-form">
+                    
+                    <span>
+                    <label class="standard-label" for="contact-email">E-mail: </label>
+                    <input type="email" required id="contact-email">
+                    
+                    <label class="standard-label" for="contact-tel">Telephone: </label>
+                    <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-tel">
+                    </span> <br>
+    
+                    <div class="contact-msg">
+                    <label class="standard-label" for="contact-msg">Message (max. 240 characters):</label><br>
+                    <textarea rows="5" cols="70" maxlength="240" required id="contact-msg"></textarea> <br>
+                    </div>
+    
+                    <div class="profile--centered">
+                    <input class="button" type="submit" value="Send Message">
+                    </div>
+                </form>
+            </div>
+        </div> 
         </div>
 
-        <div class="profile"> <!--this creates a form for contacting me where you can input your email and phone number to be reached out, along with verification for email addresses and phone numbers-->
-            <form action="" method="post" id="contact-form">
-                <label class="standard-label" for="contact-email">E-mail: </label>
-                <input type="email" required id="contact-email">
-
-                <label class="standard-label" for="contact-tel">Telephone: </label>
-                <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-tel">
-
-                <label class="standard-label" for="contact-msg">Message: </label>
-                <textarea maxlength="240" required id="contact-msg"></textarea>
-
-                <input type="submit" value="Send Message">
-            </form>
-        </div>
+        <footer class="page-footer"> <!--links at the bottom of the page for different social medias-->
+            <p>Find me on</p>
+            <div class="social-media">
+                <a class="social-media--icon" href="https://github.com/s-c-meyer?tab=projects" target="_blank"><img id="logo" src="img/github_icon.svg" alt="Github icon"></a>
+                <a class="social-media--icon" href="https://www.facebook.com/sam.c.meyer/" target="_blank"><img id="logo" src="img/fb_icon.svg" alt="Facebook icon"></a>
+                <a class="social-media--icon" href="https://www.linkedin.com/in/samuel-christopher-meyer/" target="_blank"><img id="logo" src="img/linkedin_icon.svg" alt="LinkedIn icon"></a>
+            </div>
+        </footer>
+        
 
         <script src="js/tota11y.min.js"></script>
     </body>

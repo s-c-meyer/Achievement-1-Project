@@ -6,22 +6,14 @@ Primary Color (LightBlue): #99fffd
 Seconday Color (Light Seafoam Green): #99ffc0
 */
 
-:root {
-    --background-color: #dfcfbe;
-    --primary-color: #191970;
-    --sec-color: #147ebb;
-    --reg-wt: 400;
-    --bold-wt: 700;
-}
-
 * {
     box-sizing: border-box;
 }
 
 body {
-    background-color: var(--background-color);
+    background-color: #dfcfbe;
     font-family: 'Cambay', sans-serif;
-    font-weight: var(--reg-wt);
+    font-weight: 400;
     font-size: 16px;
     line-height: 1.3;
 }
@@ -55,10 +47,22 @@ a:active {
     color: red;
 }
 
-button, .button {
+button {
     border: none;
     font-family: inherit; /*inherit causes the button to use the font family from the body*/
-    background-color: var(--primary-color);
+    background-color: #191970;
+    color: white;
+    text-decoration: none;
+    padding: 10px; /*this adds spacing to the button and will be explained further later */
+    border-radius: 3px;
+    border-bottom: 2px solid rgba(0,0,0,0.3); /*this gives the button a bottom border of 2px width*/
+    transition: 0.2s opacity;
+}
+
+.button {
+    border: none;
+    font-family: inherit; /*inherit causes the button to use the font family from the body*/
+    background-color: #191970;
     color: white;
     text-decoration: none;
     padding: 10px; /*this adds spacing to the button and will be explained further later */
@@ -87,7 +91,7 @@ button, .button {
     padding: 20px;
     border-bottom-style:groove;
     border-bottom-width: 2px;
-    border-bottom-color: var(--primary-color);
+    border-bottom-color: #191970;
 }
 
 .page-header__item {
@@ -203,7 +207,7 @@ nav.container
 
 nav.container a
 {
-    color: var(--primary-color);
+    color: #191970;
     text-decoration: none;
     font: 20px Cambay;
     margin: 0px 10px;
@@ -213,13 +217,25 @@ nav.container a
     cursor: pointer;
 }
 
-nav.topBottomBordersIn a:before, nav.topBottomBordersIn a:after
+nav.topBottomBordersIn a:before
 {
     position: absolute;
     left: 0px;
     width: 100%;
     height: 2px;
-    background: var(--primary-color);
+    background: #191970;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+nav.topBottomBordersIn a:after
+{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #191970;
     content: "";
     opacity: 0;
     transition: all 0.3s;
@@ -245,7 +261,7 @@ nav.topBottomBordersIn a:hover:before, nav.topBottomBordersIn a:hover:after
 
 /* The active nav-list item will be bold, to show that is the page that you are on*/
 a.navigation-list__item.navigation-list__item--active {
-    font-weight: var(--bold-wt);
+    font-weight: 700;
 }
 
 
@@ -292,7 +308,7 @@ a.navigation-list__item.navigation-list__item--active {
         padding: 5px;
         border-style: solid;
         border-width: 2px;
-        border-color: var(--sec-color);
+        border-color: #147ebb;
     }
 
     .grid__item:last-child {

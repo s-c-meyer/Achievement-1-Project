@@ -11,11 +11,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com"> <!--used for adding a font 1/3-->
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--used for adding a font 2/3-->
         <link href="https://fonts.googleapis.com/css2?family=Cambay:wght@400;700&display=swap" rel="stylesheet"> <!--used for adding a font 3/3-->
-        <link rel="stylesheet" type="text/css" href="css/styles.css"> <!--link to the styles.css sheet-->
+        <link rel="stylesheet" type="text/css" href="css/styles.production.css"> <!--link to the styles.css sheet-->
     </head>
     
     <body>
-        
         <header class="page-header"> <!--A navigation panel for the top of the webpage to navigate to about, contact me, and home sections-->
             <img src="img/sam-meyer-logo.svg" alt="My name as a logo" class="page-header__item">
             <nav class="main-navigation page-header__item container topBottomBordersIn">
@@ -37,7 +36,7 @@
         </header>
 
         <section> <!--Main content of the work page-->
-            <h1>Work</h1>
+            <h1 class="profile--centered">Work</h1>
             <div class="grid">
                 
                 <div class="grid__item">
@@ -91,16 +90,13 @@
         </section>
 
 
-
         <footer class="page-footer"> <!--links at the bottom of the page for different social medias-->
             <p>Find me on</p>
-            
             <div class="social-media">
-                <img src="img/github_icon.svg" alt="Github icon">
-                <img src="img/fb_icon.svg" alt="Facebook icon">
-                <img src="img/linkedin_icon.svg" alt="LinkedIn icon">
+                <a class="social-media--icon" href="https://github.com/s-c-meyer?tab=projects" target="_blank"><img id="logo" src="img/github_icon.svg" alt="Github icon"></a>
+                <a class="social-media--icon" href="https://www.facebook.com/sam.c.meyer/" target="_blank"><img id="logo" src="img/fb_icon.svg" alt="Facebook icon"></a>
+                <a class="social-media--icon" href="https://www.linkedin.com/in/samuel-christopher-meyer/" target="_blank"><img id="logo" src="img/linkedin_icon.svg" alt="LinkedIn icon"></a>
             </div>
-
         </footer>
 
       
