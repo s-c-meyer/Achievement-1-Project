@@ -37,16 +37,6 @@ h1 {
     height:40px;
 }
 
-/*
-a {
-    color: midnightblue;
-}
-
-a:visited {
-    color: cornflowerblue;
-}
-*/
-
 a:hover, a:focus { /*this applies to links that the mouse is hovering over, makes it so that the underline is removed when hovering over it */
     text-decoration: none;
 }
@@ -165,7 +155,6 @@ button, .button {
     margin: 0 auto;
     margin-bottom: 40px;
     margin-top: 40px;
-    text-align:justify;
     border-collapse: separate;
     border-spacing:20px 20px;
 }
@@ -192,7 +181,7 @@ button, .button {
 }
 
 
-/*styling added to nav from codepen provided in Exercise 1.7*/
+/*styling added to nav from codepen provided in Exercise 1.7, adds the animation of the lines coming from above and below the navigation bar*/
 nav.container
 {
     font-family: inherit;
@@ -248,7 +237,7 @@ a.navigation-list__item.navigation-list__item--active {
     font-weight: var(--bold-wt);
 }
 
-
+/*an animation to move the plane from left to right in the image */
 @keyframes plane-fly {
     from {
         transform: translate(50px, 80px);
@@ -275,6 +264,7 @@ a.navigation-list__item.navigation-list__item--active {
     animation: 10s arch-detail-shimmer infinite alternate linear;
 }
 
+/* this allows the grid to move around when the site is resized, moving the 6th box down to the bottom, and eventually moving down to only one column */
 @supports (display: grid) {
     .grid {
         display: grid;
