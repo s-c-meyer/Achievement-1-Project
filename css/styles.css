@@ -7,7 +7,7 @@ Seconday Color (Light Seafoam Green): #99ffc0
 */
 
 :root {
-    --background-color: #dfcfbe;
+    --background-color: #fff5ee;
     --primary-color: #191970;
     --sec-color: #147ebb;
     --reg-wt: 400;
@@ -312,9 +312,6 @@ a.navigation-list__item.navigation-list__item--active {
         grid-column: auto / auto;
         grid-row: auto / auto;
 
-    }
-    h1 {
-        font-size: 22px;
     }
 }
 
