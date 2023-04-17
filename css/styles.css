@@ -182,7 +182,7 @@ button, .button {
 }
 
 
-/*styling added to nav from codepen provided in Exercise 1.7, adds the animation of the lines coming from above and below the navigation bar*/
+/*styling added to nav from codepen provided in Exercise 1.7, adds the animation of the brackets coming out from the words */
 nav.container
 {
     font-family: inherit;
@@ -203,37 +203,6 @@ nav.container a
     cursor: pointer;
 }
 
-nav.topBottomBordersIn a:before, nav.topBottomBordersIn a:after
-{
-    position: absolute;
-    left: 0px;
-    width: 100%;
-    height: 2px;
-    background: var(--primary-color);
-    content: "";
-    opacity: 0;
-    transition: all 0.3s;
-}
-
-nav.topBottomBordersIn a:before
-{
-    top: 0px;
-    transform: translateY(-10px);
-}
-
-nav.topBottomBordersIn a:after
-{
-    bottom: 0px;
-    transform: translateY(10px);
-}
-
-nav.topBottomBordersIn a:hover:before, nav.topBottomBordersIn a:hover:after
-{
-    opacity: 1;
-    transform: translateY(0px);
-}
-
-/*animation added to navigation from Exercise 1.7*/
 nav.brackets a:before, nav.brackets a:after
 {
     position: absolute;
