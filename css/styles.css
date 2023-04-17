@@ -182,56 +182,6 @@ button, .button {
 }
 
 
-/*styling added to nav from codepen provided in Exercise 1.7, adds the animation of the brackets coming out from the words */
-nav.container
-{
-    font-family: inherit;
-    margin: 0 auto;
-	padding: 10px 10px;
-	text-align: center;
-}
-
-nav.container a
-{
-    color: var(--primary-color);
-    text-decoration: none;
-    font: 20px Cambay;
-    margin: 0px 10px;
-    padding: 10px 10px;
-    position: relative;
-    z-index: 0;
-    cursor: pointer;
-}
-
-nav.brackets a:before, nav.brackets a:after
-{
-    position: absolute;
-    opacity: 0;
-    font-size: 35px;
-    top: 0px;
-    transition: all 0.3s;
-}
-
-nav.brackets a:before
-{
-    content: '(';
-    left: 0px;
-    transform: translateX(10px);
-}
-
-nav.brackets a:after
-{
-    content: ')';
-    right: 0px;
-    transform: translateX(-10px);
-}
-
-nav.brackets a:hover:before, nav.brackets a:hover:after
-{
-    opacity: 1;
-    transform: translateX(0px);
-}
-
 /* The active nav-list item will be bold, to show that is the page that you are on*/
 a.navigation-list__item.navigation-list__item--active {
     font-weight: var(--bold-wt);
