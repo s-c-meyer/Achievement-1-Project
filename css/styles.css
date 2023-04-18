@@ -7,9 +7,9 @@ Seconday Color (Light Seafoam Green): #99ffc0
 */
 
 :root {
-    --background-color: #fff5ee;
-    --primary-color: #191970;
-    --sec-color: #147ebb;
+    --background-color: #D5D6D8;
+    --primary-color: #1B371B;
+    --sec-color: #502965;
     --reg-wt: 400;
     --bold-wt: 700;
 }
@@ -27,7 +27,7 @@ body {
 }
 
 h1 {
-    color: #191970;
+    color: var(--primary-color);
     font-size: 40px;
     line-height: 1.5;
 }
@@ -128,16 +128,21 @@ button, .button {
     flex-wrap: wrap;
 }
 
+.contact-msg {
+    max-width: 98vw;
+}
+
 .profile__content {
     display: flex;
     flex-direction: column;
     justify-content: start;
+    margin: 15px;
 }
 
 .profile__portrait {
     float: left;
     width: 300px;
-    margin-right: 40px;
+    margin: 0px 40px;
     border-radius: 50%; /*this gives the portrait a rounded look*/
     
 }
@@ -181,6 +186,14 @@ button, .button {
     width: 33%;
 }
 
+a.navigation-list__item {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+a.navigation-list__item:hover {
+    text-decoration: underline;
+}
 
 /* The active nav-list item will be bold, to show that is the page that you are on*/
 a.navigation-list__item.navigation-list__item--active {
@@ -225,7 +238,7 @@ a.navigation-list__item.navigation-list__item--active {
     }
 
     .grid__item {
-        background-color: lightgray;
+        background-color: #e4e4e6;
         width: auto;
         min-height: auto;
         margin: 0;
@@ -268,7 +281,7 @@ a.navigation-list__item.navigation-list__item--active {
     nav.container a {
         font-size: 15px;
     }
-   
 }
+
 
 
