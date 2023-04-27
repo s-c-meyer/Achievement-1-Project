@@ -234,10 +234,11 @@ a.navigation-list__item.navigation-list__item--active {
         width: auto;
         min-height: auto;
         margin: 0;
-        padding: 5px;
+        padding: 12px;
         border-style: solid;
-        border-width: 2px;
+        border-width: 1px;
         border-color: var(--sec-color);
+        line-height: 1.5;
     }
 
     .grid__item:last-child {
